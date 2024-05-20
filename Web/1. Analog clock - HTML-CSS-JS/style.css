@@ -1,0 +1,176 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    /*Position*/
+    /*Size*/
+    width: 100vw;
+    height: 100vh;
+    /*Appearence*/
+    background: linear-gradient(0deg, rgba(5,134,135,1) 0%, rgba(253,187,45,1) 100%);
+    /*Content*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    /*Position*/
+    position: relative;
+    /*Size*/
+    width: 300px;
+    height: 300px;
+    /*Appearence*/
+    border: 2px solid rgba(5, 5, 5, 0.95);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.5);
+    /*Content*/
+}
+
+.numbers {
+    /*Position*/
+    position: absolute;
+    /*Size*/
+    height: 100%;
+    width: 100%;
+    /*Appearence*/
+    padding: 5px;
+    /*Content*/
+    color: rgba(5, 5, 5, 0.95);
+    text-align: center;
+}
+
+.number1 {
+    transform: rotate(30deg);
+}
+
+.number2 {
+    transform: rotate(60deg);
+}
+
+.number3 {
+    transform: rotate(90deg);
+}
+
+.number4 {
+    transform: rotate(120deg);
+}
+
+.number5 {
+    transform: rotate(150deg);
+}
+
+.number6 {
+    transform: rotate(180deg);
+}
+
+.number7 {
+    transform: rotate(210deg);
+}
+
+.number8 {
+    transform: rotate(240deg);
+}
+
+.number9 {
+    transform: rotate(270deg);
+}
+
+.number10 {
+    transform: rotate(300deg);
+}
+
+.number11 {
+    transform: rotate(330deg);
+}
+
+.number12 {
+    transform: rotate(360deg);
+}
+
+.hands {
+    /*Position*/
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    translate: -50% 0;
+    transform-origin: bottom;
+    rotate: calc(var(--x) * 1deg);
+    /*Size*/
+    /*Appearence*/
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    /*Content*/
+}
+
+.hours {
+    /*Position*/
+    --x: 0;
+    /*Size*/
+    height: 27%;
+    width: 2.4%;
+    /*Appearence*/
+    background-color: rgba(5, 5, 5, 0.95);
+    /*Content*/
+}
+
+.minutes {
+    /*Position*/
+    --x: 0;
+    /*Size*/
+    height: 37.5%;
+    width: 1.7%;
+    /*Appearence*/
+    background-color: rgba(5, 5, 5, 0.95);
+    /*Content*/
+}
+
+.seconds {
+    /*Position*/
+    --x: 0;
+    z-index: 10;
+    /*Size*/
+    height: 42%;
+    width: 1.1%;
+    /*Appearence*/
+    background-color: rgba(255, 0, 0, 1);
+    /*Content*/
+}
+
+.dot {
+    /*Position*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    /*Size*/
+    /*Appearence*/
+    border-radius: 50%;
+    /*Content*/
+}
+
+.dot-black {
+    /*Position*/
+    /*Size*/
+    height: 4%;
+    aspect-ratio: 1/1;
+    /*Appearence*/
+    background-color: rgba(5, 5, 5, 0.95);
+    /*Content*/
+}
+
+.dot-red {
+    /*Position*/
+    /*Size*/
+    height: 2%;
+    aspect-ratio: 1/1;
+    /*Appearence*/
+    background-color: rgba(255, 0, 0, 1);
+    /*Content*/
+}

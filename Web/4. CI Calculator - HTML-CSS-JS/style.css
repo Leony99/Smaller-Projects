@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+
+    margin: 0px;
+    padding: 0px;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background: linear-gradient(135deg, rgba(20,75,1,1) 0%, rgba(4,4,77,1) 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 350px;
+
+    border-radius: 7px;
+    background-color: rgba(34, 40, 44, 1);
+    box-shadow: 0px 4px 15px rgba(5, 5, 5, 0.7);
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    padding: 10px;
+    color: rgba(238, 238, 238, 1);
+
+    text-align: center;
+}
+
+.line {
+    align-self: center;
+
+    width: 250px;
+    height: 2px;
+
+    background: linear-gradient(315deg, rgba(20,75,1,1) 0%, rgba(4,4,77,1) 100%);
+    border: none;
+}
+
+.form {
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.field {
+    margin-bottom: 10px;
+
+    display: flex;
+    flex-flow: wrap;
+    overflow: hidden;
+}
+
+.field label {
+    color: rgba(238, 238, 238, 1);
+}
+
+.field .radio {
+    margin-left: 10px;
+    margin-right: 2px;
+
+    width: auto;
+    height: auto;
+
+    cursor: pointer;
+}
+
+.field #radioMonthly, #radioMonths {
+    accent-color: rgba(4, 4, 77, 1);
+}
+
+.field #radioYearly, #radioYears {
+    accent-color: rgba(20, 75, 1, 1);
+}
+
+.field .radioLabel {
+    width: auto;
+
+    cursor: pointer;
+}
+
+.field input {
+    width: 100%;
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(238, 238, 238, 1);
+    color: rgba(238, 238, 238, 1);
+    font-size: 15px;
+}
+
+.field input:focus {
+    outline: none;
+}
+
+.field input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.results {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.results .field {
+    border: 1px solid white;
+    border-radius: 7px;
+}
+
+.results .field p {
+    padding-left: 5px;
+    color: rgba(238, 238, 238, 1);;
+}
+
+.results .field .final {
+    padding-left: 0px;
+    color: green;
+}
+
+.results .field .invested {
+    padding-left: 0px;
+    color: red;
+}
+
+.results .field .interest {
+    padding-left: 0px;
+    color: green;
+}
+
+.submitBtn {
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    width: calc(100% - 60px);
+    height: 35px;
+
+    background: linear-gradient(315deg, rgba(20,75,1,1) 0%, rgba(4,4,77,1) 100%);
+    border: none;
+    border-radius: 7px;
+    color: rgba(238, 238, 238, 1);
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.submitBtn:hover {
+    transform: translateY(-0.25em);
+    box-shadow: 0px 3px 8px rgba(5, 5, 5, 0.7);
+  }
