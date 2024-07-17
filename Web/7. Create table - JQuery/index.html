@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <script>
+        $(document).ready(function(){
+            const pessoas = [
+                {nome: "Pessoa 1", nota: 8},
+                {nome: "Pessoa 2", nota: 7},
+                {nome: "Pessoa 3", nota: 6.5},
+                {nome: "Pessoa 4", nota: 7.5},
+                {nome: "Pessoa 5", nota: 10},
+            ]
+
+            const linhas = pessoas.map(p => {
+                const tdNome = $('<td>').html(p.nome).css("padding-right", "10px");
+                const tdNota = $('<td>').html(p.nota).css("text-align", "center");
+
+                return $('<tr>').append(tdNome).append(tdNota);
+            })
+
+            const table = $('<table>').append('<thead><tr><th>Nome</th><th>Nota</th></tr></thead>')
+                .append(linhas).css("border", "solid 5px");
+            
+            $('body').append(table);
+        });
+    </script>
+</body>
+
+</html>
