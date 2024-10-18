@@ -1,0 +1,19 @@
+{
+  "name": "jquery-plugin-library",
+  "version": "1.0.0",
+  "description": "A library containing some JQuery plugins",
+  "main": "src/index.html",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "prod": "cross-env NODE_ENV=production webpack"
+  },
+  "author": "Leony Costa",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}
