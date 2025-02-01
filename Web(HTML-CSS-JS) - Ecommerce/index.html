@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Início</title>
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/indexStyle.css">
+        <script defer src="./scripts/script.js"></script>
+        <script defer src="./scripts/indexScript.js"></script>
+    </head>
+    <body>
+        <!--Cart-->
+        <div class="cart">
+            <p>Meu carrinho</p>
+            <div class="line"></div>
+            <div class="cart-products">
+                
+            </div>
+            <button class="buy-button">Finalizar pedido</button>
+        </div>
+
+        <!--Header-->
+        <section class="header">
+            <div class="logo">LOGO</div>
+            <div class="menu">
+                <a href="index.html" class="current">Início</a>
+                <a href="catalog.html">Catálogo</a>
+                <a href="conta.html">Minha conta</a>
+                <!--Form sending input "search" data as "get" to "catalog.html" url-->
+                <form class="search-box search-box-closed" action="catalog.html" method="get" autocomplete="off">
+                    <input class="search-input search-input-closed" placeholder="Sua procura" name="search">
+                    <button class="search-button search-button-closed" type="submit">
+                        <img src="icons/search.svg" style="aspect-ratio: 1/1; width: 24px;">
+                    </button>
+                </form>
+                <div class="cart-icon" style="width: 24px; height: 24px;">
+                    <img src="icons/shopping-cart.svg" style="aspect-ratio: 1/1; width: 24px;"
+                    class="filter-white">
+                </div>
+            </div>
+        </section>
+
+        <!--Content-section-->
+        <section class="content-section">
+            <div class="slide-box">
+                <div class="slides">
+                    <img class="slide-1" src="images/1.png" alt="prop1"/>
+                    <img class="slide-2" src="images/2.png" alt="prop2"/>
+                </div>
+                <div class="nav">
+                    <input type="radio" name="slides" id="radio-1" checked>
+                    <label for="radio-1"></label>
+                    <input type="radio" name="slides" id="radio-2">
+                    <label for="radio-2"></label>
+                </div>
+            </div>
+
+            <div class="division offers">
+                <p>Ofertas</p>
+                <div class="line"></div>
+                <div class="offer">
+                    <div class="offer-text">
+                        <p class="title">Aproveite o frete grátis!</p>
+                        <p class="text">Frete grátis em todas as compras acima de 300 reais. Envios para todo o Brasil.</p>
+                        <div class="button" onclick="window.location.href = 'catalog.html';">Catálogo</div>
+                        <p class="mini-text">Promoção válida por tempo inderteminado!</p>
+                    </div>
+                    <div class="offer-img-box"><img class="offer-img" src="images/3.png" alt="prop3"></div>
+                </div>
+                <div class="offer">
+                    <div class="offer-img-box"><img class="offer-img" src="images/4.png" alt="prop4"></div>
+                    <div class="offer-text">
+                        <p class="title">Queima de estoque.</p>
+                        <p class="text">É a sua chance de economizar e levar para casa o que há de melhor. Estoque limitado, ofertas inacreditáveis.</p>
+                        <div class="button" onclick="window.location.href = 'catalog.html';">Catálogo</div>
+                        <p class="mini-text">Promoção válida por tempo inderteminado!</p>
+                    </div>
+                </div>
+                <div class="offer">
+                    <div class="offer-text">
+                        <p class="title">Promoção de inverno.</p>
+                        <p class="text">O inverno está chegando, aproveite esta oportunidade!</p>
+                        <div class="button" onclick="window.location.href = 'catalog.html?search=moletom';">Catálogo</div>
+                        <p class="mini-text">Promoção válida por tempo limitado!</p>
+                    </div>
+                    <div class="offer-img-box"><img class="offer-img" src="images/5.png" alt="prop5"></div>
+                </div>
+            </div>
+
+            <div class="division best-sellers">
+                <p>Mais vendidos</p>
+                <div class="line"></div>
+                <div class="showcase-box">
+                    <div class="showcase-products">
+                        <div class="product-card regata" onclick="redirectToProductPage(this);"
+                        data-image="productImages/Regata simples (preta).jpg"
+                        data-name="Regata simples (preta)"
+                        data-price=59.90>
+                        <div><img src="productImages/Regata simples (preta).jpg" style="aspect-ratio: 1/1; width: 250px;"></div>
+                        <p>Regata simples (preta)</p>
+                        <p>R$ 59,90</p>
+                        </div>
+                        <div class="product-card camiseta" onclick="redirectToProductPage(this);"
+                        data-image="productImages/Camiseta simples (branca).jpg"
+                        data-name="Camiseta simples (branca)"
+                        data-price=89.90>
+                            <div><img src="productImages/Camiseta simples (branca).jpg" style="aspect-ratio: 1/1; width: 250px;"></div>
+                            <p>Camiseta simples (branca)</p>
+                            <p>R$ 89,90</p>
+                        </div>
+                        <div class="product-card camiseta" onclick="redirectToProductPage(this);"
+                        data-image="productImages/Camiseta simples (cinza).jpg"
+                        data-name="Camiseta simples (cinza)"
+                        data-price=89.90>
+                            <div><img src="productImages/Camiseta simples (cinza).jpg" style="aspect-ratio: 1/1; width: 250px;"></div>
+                            <p>Camiseta simples (cinza)</p>
+                            <p>R$ 89,90</p>
+                        </div>
+                        <div class="product-card regata" onclick="redirectToProductPage(this);"
+                        data-image="productImages/Regata com botões (preta).jpg"
+                        data-name="Regata com botões (preta)"
+                        data-price=59.90>
+                            <div><img src="productImages/Regata com botões (preta).jpg" style="aspect-ratio: 1/1; width: 250px;"></div>
+                            <p>Regata com botões (preta)</p>
+                            <p>R$ 59,90</p>
+                        </div>
+                        <div class="product-card moletom" onclick="redirectToProductPage(this);"
+                        data-image="productImages/Moletom sem capuz (preto).jpg"
+                        data-name="Moletom sem capuz (preto)"
+                        data-price=119.90>
+                            <div><img src="productImages/Moletom sem capuz (preto).jpg" style="aspect-ratio: 1/1; width: 250px;"></div>
+                            <p>Moletom sem capuz (preto)</p>
+                            <p>R$ 119,90</p>
+                        </div>
+                        <div class="product-card camiseta" onclick="redirectToProductPage(this);"
+                        data-image="productImages/Camiseta polo simples (branca).jpg"
+                        data-name="Camiseta polo simples (branca)"
+                        data-price=109>
+                            <div><img src="productImages/Camiseta polo simples (branca).jpg" style="aspect-ratio: 1/1; width: 250px;"></div>
+                            <p>Camiseta polo simples (branca)</p>
+                            <p>R$ 109</p>
+                        </div>
+                        <div class="product-card camiseta" onclick="redirectToProductPage(this);"
+                        data-image="productImages/Camiseta com botões (escura).jpg"
+                        data-name="Camiseta com botões (escura)"
+                        data-price=99.90>
+                            <div><img src="productImages/Camiseta com botões (escura).jpg" style="aspect-ratio: 1/1; width: 250px;"></div>
+                            <p>Camiseta com botões (escura)</p>
+                            <p>R$ 99,90</p>
+                        </div>
+                        <div class="product-card camiseta" onclick="redirectToProductPage(this);"
+                        data-image="productImages/Camiseta gola V (escura).jpg"
+                        data-name="Camiseta gola V (escura)"
+                        data-price=79.90>
+                            <div><img src="productImages/Camiseta gola V (escura).jpg" style="aspect-ratio: 1/1; width: 250px;"></div>
+                            <p>Camiseta gola V (escura)</p>
+                            <p>R$ 79,90</p>
+                        </div>
+                        <div class="product-card moletom" onclick="redirectToProductPage(this);"
+                        data-image="productImages/Moletom simples (preto).jpg"
+                        data-name="Moletom simples (preto)"
+                        data-price=160>
+                            <div><img src="productImages/Moletom simples (preto).jpg" style="aspect-ratio: 1/1; width: 250px;"></div>
+                            <p>Moletom simples (preto)</p>
+                            <p>R$ 160</p>
+                        </div>
+                    </div>
+                    <div class="showcase-nav">
+                        <div class="arrow arrow-left">
+                            <img src="icons/angulo-pequeno-esquerdo.svg" style="aspect-ratio: 1/1; width: 24px;">
+                        </div>
+                        <div class="arrow arrow-right">
+                            <img src="icons/angulo-pequeno-direito.svg" style="aspect-ratio: 1/1; width: 24px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="division rastr">
+                <p>Rastrear pedido</p>
+                <div class="line"></div>
+                <form class="rastr-box">
+                    <input class="rastr-input" placeholder="Insira seu código de rastreamento.">
+                    <button class="rastr-button">
+                        <img src="icons/angulo-duplo-direito.svg" style="aspect-ratio: 1/1; width: 24px;">
+                    </button>
+                </form>
+            </div>
+
+            <div class="division news">
+                <p>Newsletter</p>
+                <div class="line"></div>
+                <form class="news-box">
+                    <p>Assine nosso newsletter e fique por dentro de todas as novidades!</p>
+                    <input class="news-input" placeholder="Insira seu nome">
+                    <input class="news-input" placeholder="Insira seu e-mail">
+                    <button class="news-button">
+                        <img src="icons/angulo-duplo-direito.svg" style="aspect-ratio: 1/1; width: 24px;">
+                    </button>
+                </form>
+            </div>
+
+        </section>
+
+        <!--Footer-->
+        <section class="footer">
+            <div class="footer-div about">
+                <p class="footer-title">Sobre nós</p>
+                <p>Somos uma loja iniciando e temos o objetivo de levar uma cuidadosa seleção de roupas que combinam estilo, qualidade e conforto para seu armário. Garantimos a entrega.</p>
+            </div>
+            <div class="footer-div social">
+                <p class="footer-title">Social</p>
+                <div class="footer-socials">
+                    <a href="">
+                        <img src="icons/whatsapp.svg" style="aspect-ratio: 1/1; width: 24px;" class="filter-white">
+                    </a>
+                    <a href="">
+                        <img src="icons/instagram.svg" style="aspect-ratio: 1/1; width: 24px;" class="filter-white">
+                    </a>
+                    <a href="">
+                        <img src="icons/facebook.svg" style="aspect-ratio: 1/1; width: 24px;" class="filter-white">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-div links">
+                <p class="footer-title">Links</p>
+                    <a href="">Termos de uso.</a>
+                    <a href="">Política de privacidade.</a>
+                    <a href="">Política de entregas.</a>
+                    <a href="">Política de trocas e devoluções.</a>
+            </div>
+        </section>
+
+    </body>
+</html>

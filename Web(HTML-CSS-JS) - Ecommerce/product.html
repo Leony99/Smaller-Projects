@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Produto</title>
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/productStyle.css">
+        <script defer src="./scripts/script.js"></script>
+        <script defer src="./scripts/productScript.js"></script>
+    </head>
+    <body>
+        <!--Cart-->
+        <div class="cart">
+            <p>Meu carrinho</p>
+            <div class="line"></div>
+            <div class="cart-products">
+                
+            </div>
+            <button class="buy-button">Finalizar pedido</button>
+        </div>
+
+        <!--Header-->
+        <section class="header">
+            <div class="logo">LOGO</div>
+            <div class="menu">
+                <a href="index.html">Início</a>
+                <a href="catalog.html">Catálogo</a>
+                <a href="conta.html">Minha conta</a>
+                <form class="search-box search-box-closed" action="catalog.html" method="get" autocomplete="off">
+                    <input class="search-input search-input-closed" placeholder="Sua procura" name="search">
+                    <button class="search-button search-button-closed" type="submit">
+                        <img src="icons/search.svg" style="aspect-ratio: 1/1; width: 24px;">
+                    </button>
+                </form>
+                <div class="cart-icon" style="width: 24px; height: 24px;">
+                    <img src="icons/shopping-cart.svg" style="aspect-ratio: 1/1; width: 24px;"
+                    class="filter-white">
+                </div>
+            </div>
+        </section>
+
+        <!--Content-section-->
+        <section class="content-section">
+            <div class="line"></div>
+            <div class="product-box">
+                <div class="product-image">
+                    <img src="" >
+                </div>
+                <div class="product-info">
+                    <p class="product-name">Produto 1</p>
+                    <div class="product-value">
+                        <div class="value">
+                            <div class="value-price">
+                                <img src="icons/money-bill-wave.svg" style="aspect-ratio: 1/1; width: 24px;" class="filter-white">
+                                R$ <span class="value-price-discount">00,00</span>
+                            </div>
+                            <p class="value-text">No <b>pix</b> ou <b>boleto</b>.</p>
+                        </div>
+                        <div class="value">
+                            <div class="value-price">
+                                <img src="icons/credit-card.svg" style="aspect-ratio: 1/1; width: 24px;" class="filter-white">
+                                R$ <span class="value-price-normal">00,00</span>
+                            </div>
+                            <p class="value-text">No cartão em até <b>10x</b>.</p>
+                        </div>
+                    </div>
+                    <div class="product-size">
+                        Tamanho:
+                        <div class="sizes">
+                            <div class="size-checkbox">
+                                <input type="radio" id="checkboxP" name="size">
+                                <label class="labelP" for="checkboxP"></label>
+                            </div>
+                            <div class="size-checkbox">
+                                <input type="radio" id="checkboxM" name="size">
+                                <label class="labelM" for="checkboxM"></label>
+                            </div>
+                            <div class="size-checkbox">
+                                <input type="radio" id="checkboxG" name="size">
+                                <label class="labelG" for="checkboxG"></label>
+                            </div>
+                            <div class="size-checkbox">
+                                <input type="radio" id="checkboxGG" name="size">
+                                <label class="labelGG" for="checkboxGG"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-quantity">
+                        Quantidade:
+                        <div class="counter-container">
+                            <button class="counter-button counter-left" onclick="decrement()">-</button>
+                            <div class="counter-value" id="counterValue">1</div>
+                            <button class="counter-button counter-right" onclick="increment()">+</button>
+                        </div>
+                    </div>
+                    <button class="buy-button" onclick="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+                    <div class="freight-calc">
+                        <div class="freight-text">
+                            <img src="icons/truck.svg" style="aspect-ratio: 1/1; width: 30px;" class="filter-white">
+                            Calcule<br>seu frete:
+                        </div>
+                        <form class="freight-box">
+                            <input class="freight-input" placeholder="00000-000">
+                            <button class="freight-button">
+                                <img src="icons/angulo-duplo-direito.svg" style="aspect-ratio: 1/1; width: 20px;">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Footer-->
+        <section class="footer">
+            <div class="footer-div about">
+                <p class="footer-title">Sobre nós</p>
+                <p>Somos uma loja iniciando e temos o objetivo de levar uma cuidadosa seleção de roupas que combinam estilo, qualidade e conforto para seu armário. Garantimos a entrega.</p>
+            </div>
+            <div class="footer-div social">
+                <p class="footer-title">Social</p>
+                <div class="footer-socials">
+                    <a href="">
+                        <img src="icons/whatsapp.svg" style="aspect-ratio: 1/1; width: 24px;" class="filter-white">
+                    </a>
+                    <a href="">
+                        <img src="icons/instagram.svg" style="aspect-ratio: 1/1; width: 24px;" class="filter-white">
+                    </a>
+                    <a href="">
+                        <img src="icons/facebook.svg" style="aspect-ratio: 1/1; width: 24px;" class="filter-white">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-div links">
+                <p class="footer-title">Links</p>
+                    <a href="">Termos de uso.</a>
+                    <a href="">Política de privacidade.</a>
+                    <a href="">Política de entregas.</a>
+                    <a href="">Política de trocas e devoluções.</a>
+            </div>
+        </section>
+
+    </body>
+</html>

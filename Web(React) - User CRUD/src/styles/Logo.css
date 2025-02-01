@@ -1,0 +1,38 @@
+aside.logo {
+    height: var(--header-height);
+    background-color: var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+aside.logo .logo-border {
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(135deg, #07a7e3 0%, #32dac3 100%);
+}
+
+aside.logo a {
+    font-family: 'Tanker', sans-serif;
+    color: white;
+    font-size:xx-large;
+    text-decoration: none;
+    margin: auto;
+}
+
+@media (max-width: 767px) {
+    aside.logo {
+        box-shadow: var(--shadow);
+    }
+
+    aside.logo .logo-border {
+        display: none;
+    }
+}
+
+@media (max-width: 479px) {
+    aside.logo {
+        height: var(--header-height-479);
+    }
+  }

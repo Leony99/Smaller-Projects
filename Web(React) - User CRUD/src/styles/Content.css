@@ -1,0 +1,49 @@
+main > div {
+    background-color: white;
+    box-shadow: 0px 0px 15px #0004;
+}
+
+table {
+    width: 100%;
+}
+
+table th {
+    padding: 0.8rem !important;
+    background: rgb(240, 240, 240);
+}
+
+table td {
+    padding: 0.5rem;
+}
+
+table tr:nth-child(even) {
+    background: rgb(240, 240, 240);
+}
+
+table button {
+    width: 80px;
+}
+
+@media (max-width: 900px) {
+    thead {
+        display: none;
+    }
+
+    table td {
+        display: block;
+        text-align: right;
+    }
+
+    table td::before {
+        content: attr(data-label) ": ";
+        float: left;
+    }
+
+    table .actions::before {
+        content:none;
+    }
+
+    tr:nth-child(even) {
+        background: rgb(240, 240, 240);
+    }
+}
